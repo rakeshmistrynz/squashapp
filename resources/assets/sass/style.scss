@@ -1,0 +1,63 @@
+/*
+Project: Squash App
+Description: Styles for Squash App
+Author: Rakesh Mistry
+Version: 0.1
+*/
+
+/* Table of content
+-----------------------------------------------
+1. Fonts
+2. Bootstrap
+3. Bootstrap Date Picker
+4. Font Awesome
+5. Application Styles
+  -Parent Container
+  -Back to Top
+  -Errors
+  -Headings
+  -Login Page
+  -Navigation
+  -Overlay (For Ajax)
+  -Global Styles
+  -User Profile
+  -Booking Calendar
+  -My Bookings
+  -Ladder
+  -Ladder Results
+  -Rules Page
+  -Notice Board
+  -Player Profile
+  -Block Bookings List
+  -Footer
+*/
+
+/* =Fonts
+----------------------------------------------- */
+
+@import "fonts";
+
+
+/* =Bootstrap
+----------------------------------------------- */
+
+@import "bootstrap";
+
+
+/* =Bootstrap Date Picker
+----------------------------------------------- */
+
+@import "bootstrap-datepicker3";
+
+
+/* =Font Awesome
+----------------------------------------------- */
+
+@import "font-awesome";
+
+
+/* =Application Styles
+----------------------------------------------- */
+
+@import "variables";
+@import "squash";

@@ -1,0 +1,1326 @@
+*{
+  //outline: orange 1px dotted;
+}
+
+/* =Parent Container - pushes footer to bottom
+----------------------------------------------- */
+.full-height {
+
+  min-height: 50em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-height:after {
+
+  content: "";
+  display: block;
+  height: 2em;
+}
+
+/* =Back to Top
+----------------------------------------------- */
+#toTop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+
+  &.btn{
+    background-color: $red;
+    border: $red;
+  }
+
+}
+
+/* =Errors
+----------------------------------------------- */
+.alert {
+
+  margin-bottom: 0;
+}
+
+div.row.alert-danger, ul.alert-danger{
+  background-color: $grey;
+  color: white;
+  border-color: white;
+  font-weight: bold;
+}
+
+
+/* =Headings
+----------------------------------------------- */
+h1 {
+
+  font-family: 'roboto_condensedbold',arial, sans-serif;;
+  width: 100%;
+  padding-bottom: 0.5em;
+  margin: 0;
+  background-color: white;
+}
+
+h3 {
+
+  font-family: 'robotobold',arial, sans-serif;;
+}
+
+h4 {
+
+  font-family: 'roboto_condensedbold',arial, sans-serif;;
+  color: $grey;
+  font-size: 1.5em;
+}
+
+.modal h5 {
+
+  font-family: 'robotoregular',arial, sans-serif;;
+  color: black;
+  font-size: 1.5em;
+}
+
+
+/* =Login Page
+----------------------------------------------- */
+.background-image {
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.login {
+
+  margin: 0;
+}
+
+.login-panel {
+
+  margin-top: 5em;
+  padding: 0;
+
+  a{
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    color: white;
+  }
+
+  .btn{
+    margin: 1em 0 !important;
+    &:hover{
+      background-color: $red;
+    }
+  }
+
+  .panel{
+    margin: 0;
+    background-color: $grey;
+    border: none;
+
+    label{
+      color: white;
+    }
+  }
+
+  .panel-heading {
+
+    background-color: white;
+    padding: 1em;
+    a{
+      display: inline;
+    }
+
+  }
+
+  .panel-body{
+    padding: 15px 50px;
+  }
+
+  @media screen and (max-width: $break-small) {
+
+    img {
+
+      width: 15em;
+    }
+  }
+
+  .panel-footer{
+    background-color: transparent;
+    a{
+      color: $grey;
+    }
+    border: none;
+  }
+}
+
+/* =Navigation
+----------------------------------------------- */
+header {
+  display: none;
+
+  @media (min-width: $screen-sm-min){
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'robotobold',arial, sans-serif;;
+    display: block;
+
+    a.logo {
+      float: left;
+      width: 12em;
+      position: relative;
+      display: block;
+    }
+
+    a.logo img {
+      width: 100%;
+      float: left;
+      height: 100%;
+
+    }
+  }
+}
+
+//Mobile Menu Logo container
+.brand {
+
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.brand img {
+  display: inline;
+  width: 12em;
+}
+
+.navbar-default {
+  background-color: $red;
+}
+
+.navbar-collapse {
+  background-color: white;
+  color: $red;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'robotobold',arial, sans-serif;;
+  color: $red;
+  font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav > li > a > i {
+  margin-left: 0.3em;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: $red;
+  color: white;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: $red;
+  color: white;
+}
+
+//Push mobile menu to the left
+.navbar-left {
+  position: fixed;
+  left: -17em;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+  transition: left 0.5s ease;
+  padding-top: 2em;
+  padding-right: 2em;
+  overflow-y: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
+}
+
+.nav-title {
+
+  position: absolute;
+  font-family: 'roboto_condensedbold',arial, sans-serif;;
+  color: white;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  width: 10em;
+  left: 50%;
+  margin-left: -5em;
+
+}
+
+.navbar-default .navbar-toggle:hover {
+
+  background-color: $red;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+
+  background-color: white;
+}
+
+//Bring mobile menu out when user toggle's mobile menu icon
+.move-left {
+
+  left: 1em;
+}
+
+.navbar-toggle {
+
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+
+  background-color: $red;
+}
+
+.hide-overflow {
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: $screen-sm-min) {
+
+  .profile-area{
+    width: 12em;
+    height: 4em;
+    float: right;
+    position: relative;
+    .profile-image{
+      float: left;
+      width: 4em;
+      height: 4em;
+      position: relative;
+      img{
+        height: 100%;
+        width: 100%;
+        float: left;
+      }
+    }
+    .name{
+      float: left;
+      margin-left: 1em;
+      span{
+        display: block;
+        width: 100%;
+      }
+    }
+    .lock{
+      font-size: 1.5em;
+      color: $grey;
+      float: right;
+      line-height: 0;
+    }
+  }
+
+  .brand {
+
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+    background-color: $red;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+
+    color: white;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover {
+
+    background-color: white;
+    color: $red;
+  }
+
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+
+    background-color: white;
+    color: $red;
+  }
+
+  .navbar-left {
+
+    padding-top: 0;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    left: auto;
+    right: auto;
+    overflow-y: initial;
+  }
+
+  .nav-title {
+
+    display: none;
+  }
+
+  .col-md-2 {
+
+    padding: 0;
+  }
+
+  .col-md-2 img {
+
+    width: 4em;
+    height: 4em;
+    display: block;
+  }
+
+  .col-md-2 .col-md-10 {
+
+    padding-left: 4em;
+
+    i.fa {
+      padding-left: 0.2em;
+      font-size: 1.5em;
+      color: $grey;
+    }
+
+  }
+
+  li.logout {
+
+    display: none;
+  }
+
+}
+
+/* =Overlay (For Ajax)
+----------------------------------------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-hide {
+
+  display: none;
+}
+
+.overlay-modal {
+  width: 10em;
+  height: 10em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -5em;
+  margin-left: -5em;
+  padding-top: 2.5em;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 11; /* 1px higher than the overlay layer */
+}
+
+
+/* =Global Styles
+----------------------------------------------- */
+.biege {
+
+  background-color: $biege;
+}
+
+.bg-white {
+
+  background-color: white;
+}
+
+.margin-top{
+  margin-top: 2em;
+}
+
+.booking-modal, .delete-modal, .result-modal{
+
+  .modal-header{
+    background-color: $grey;
+    .close{
+      margin-top: 0;
+    }
+    h5{
+      font-family: 'robotobold',arial, sans-serif;;
+      color: white;
+    }
+
+  }
+  .modal-body{
+
+    div.clearfix{
+      margin-bottom: 0;
+    }
+
+    .text-center{
+
+      float: none;
+    }
+
+    h5.alert-danger{
+      margin-bottom: 1em;
+      background-color: transparent;
+      border-color: $grey;
+      color: $grey;
+    }
+
+    div{
+      margin-bottom: 1em;
+    }
+
+    .tt-dropdown-menu{
+      margin: 0;
+      padding: 0;
+      div{
+        margin-bottom: 0;
+        padding: 0.5em;
+      }
+    }
+
+    .booking-type, .playing-partner{
+      background-color: transparent;
+      border-color: $grey;
+      label{
+        color: $grey;
+      }
+    }
+  }
+  .modal-footer{
+    background-color: transparent;
+    .book-btn{
+      background-color: $red;
+      border: none;
+      font-family: 'robotobold',arial, sans-serif;;
+    }
+  }
+}
+
+.glyphicon-remove {
+
+  color: black;
+  font-weight: lighter;
+}
+
+//Buttons
+.book-btn, .book-btn[disabled]{
+  background-color: $red;
+  border: white 1px solid !important;
+  font-family: 'robotobold',arial, sans-serif;;
+  padding: 0.5em 1.5em;
+}
+
+.create-btn:hover{
+  color: red;
+  background-color: white !important;
+  border: red solid 1px!important;
+}
+
+.book-btn-head-div{
+  float:right;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+
+.book-btn-head{
+  background-color: $grey;
+  &:hover{
+    background-color: $grey;
+    color: white;
+  }
+}
+
+//Modal Player Search
+.player-search{
+  background-color: $grey;
+  margin: 1em 0;
+  label{
+    color: white;
+  }
+}
+
+//Twitter Type ahead styles
+.tt-dropdown-menu {
+  width: 252px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.typeahead {
+  background-color: #fff;
+  width: 100%;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.twitter-typeahead {
+
+  width: 100%;
+}
+
+.form-horizontal .form-group {
+
+  margin: 0;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.remove-form {
+
+  margin-top: 1em;
+}
+
+a.accordion-toggle {
+
+  display: block;
+  border: none;
+  border-radius: 0;
+}
+
+label {
+
+  width: 100%;
+}
+
+/* =User Profile
+----------------------------------------------- */
+.upload-photo{
+  border: 1px $grey solid;
+  margin: 1em 0;
+  background-color: $grey;
+  label{
+    font-weight: bolder;
+    padding: 0.5em 0;
+    color: white;
+    text-align: left;
+  }
+  input{
+    width: 100%;
+    color: white;
+  }
+}
+
+
+/* =Booking Calendar
+----------------------------------------------- */
+.date-container {
+
+  padding-bottom: 1em;
+}
+
+.datepicker {
+
+  margin: 0 auto;
+}
+
+#datevalue{
+
+  h4{
+    font-size: 2em;
+    padding-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+}
+
+.booking-accordion{
+  .alert{
+    padding: 10px;
+  }
+}
+
+.accordion-heading {
+
+  font-family: 'robotobold',arial, sans-serif;;
+}
+
+.accordion [data-toggle="collapse"]:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e072"; /* "play" icon */
+  float: right;
+  color: white;
+  font-size: 18px;
+  line-height: 22px;
+
+  /* rotate "play" icon from > (right arrow) to down arrow */
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.accordion [data-toggle="collapse"].collapsed:after {
+  /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.flash{
+
+  -moz-animation: flash 1s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash 1s ease-out;
+  -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash {
+  0% { background-color:none;}
+  50% { background-color:#cccccc;}
+  100% {background-color:none;}
+}
+
+@-moz-keyframes flash {
+  0% { background-color:none;}
+  50% { background-color:#cccccc;}
+  100% {background-color:none;}
+}
+
+@-ms-keyframes flash {
+  0% { background-color:none;}
+  50% { background-color:#cccccc;}
+  100% {background-color:none;}
+}
+
+
+/* =My Bookings
+----------------------------------------------- */
+.my-bookings{
+
+  li:first-of-type{
+    margin-bottom: 1em;
+  }
+
+  li{
+    margin-bottom: 0.5em;
+  }
+}
+
+.remove {
+  float: right;
+  color: $red;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  padding: 0;
+}
+
+.remove:hover {
+
+  text-decoration: none;
+  color: black;
+  border-color: $red;
+  background-color: transparent;
+}
+
+.remove:visited {
+
+  color: $red;
+  font-weight: 900;
+}
+
+.date {
+
+  font-family: 'robotoregular',arial, sans-serif;;
+  font-size: 1.25em;
+}
+
+.time {
+
+  font-family: 'robotothin',arial, sans-serif;;
+  font-size: 1.5em;
+}
+
+li p:nth-of-type(3), li p:nth-of-type(4), .opponent {
+
+  font-family: 'robotothin',arial, sans-serif;;
+  font-size: 1em;
+  font-weight: 800;
+
+}
+
+
+/* =The Ladder
+----------------------------------------------- */
+
+#the-ladder{
+
+  li{
+
+    margin-bottom: 0.5em;
+    padding: 10px 0 10px 15px;
+    cursor: pointer;
+
+    &:first-of-type{
+      margin-bottom: 1em;
+    }
+
+    div:first-of-type{
+      width: 70%;
+      height: 4em;
+      float: left;
+      border-right: 1px $grey solid;
+    }
+    div:last-of-type{
+      width: 30%;
+      float: left;
+      height: 100%;
+    }
+
+    .name{
+      display: inline-block;
+      font-family: 'robotothin',arial, sans-serif;;
+      margin-left: 0.5em;
+      font-weight: bolder;
+      font-size: 1.2em;
+      color: black;
+    }
+
+    span{
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      font-family: 'robotoregular',arial, sans-serif;;
+      color: $grey;
+    }
+
+    .points{
+      font-family: 'robotobold',arial, sans-serif;;
+      font-size: 2em;
+      line-height: 2em;
+    }
+  }
+
+}
+
+/* =Result Lists / Enter Result Modal
+----------------------------------------------- */
+.results-list{
+
+  li{
+    margin-bottom: 1em;
+  }
+
+  .fa-trophy, .upload{
+    float: right;
+    font-size: 1.5em;
+  }
+
+  .fa-trophy{
+    color: $grey;
+  }
+
+  .upload {
+    color: $red;
+  }
+}
+
+.result-modal{
+
+  .modal-body{
+
+    div{
+      margin-bottom: 0;
+    }
+
+    .btn{
+      margin-bottom: 1em;
+      font-family: 'robotobold',arial, sans-serif;;
+      color: $grey;
+    }
+
+    .radioLabel, .user_name, .opponent_name{
+      font-family: 'robotobold',arial, sans-serif;;
+      margin-bottom: 1em;
+    }
+
+    .win-loss-msg{
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+      padding: 0.5em 0;
+      font-family: 'robotobold',arial, sans-serif;;
+      background-color: $red;
+      color: white;
+
+    }
+
+    .score-button {
+      background-image: url('../images/buttons.png');
+      background-position: 0 0;
+      cursor: pointer;
+      width: 50px;
+      height: 25.1px;
+      margin: 0 !important auto;
+    }
+
+    .down {
+
+      background-position: 0 -25.1px;
+    }
+
+    .user_score, .opponent_score{
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+//Score input modal styles
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  color: $DarkGrey;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 50%;
+}
+
+input[type="radio"] + label span {
+  border: 1px solid black;
+}
+
+input[type="radio"]:checked + label span {
+  background-color: $DarkGrey;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+}
+
+
+.modal-body .row {
+
+  margin-bottom: 1em;
+}
+
+.opponent_name, .user_name {
+
+  margin: 1em auto 0 auto;
+
+}
+
+input[name="user_score"], input[name="opponent_score"] {
+
+  border: none;
+  text-align: center;
+  box-shadow: none;
+  font-weight: bold;
+
+}
+
+li p:last-of-type span {
+
+  margin-right: 0.8em;
+}
+
+/* =Rules Page
+----------------------------------------------- */
+.rules li {
+
+  background-color: white;
+  margin-top: 1em;
+  font-family: 'robotoregular',arial, sans-serif;;
+  color: $grey;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+
+/* =Notice Board
+----------------------------------------------- */
+
+.notice-wrapper{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+
+  .notice-columns{
+    padding: 0 2.5em;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 10px;
+    -moz-column-count: 1;
+    -moz-column-gap: 10px;
+    column-count: 1;
+    column-gap: 15px;
+    @media (min-width: 500px) {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+    @media (min-width: 960px) {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4;
+    }
+    @media (min-width: 1100px) {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4;
+    }
+  }
+}
+
+.pin {
+  display: inline-block;
+  width: 100%;
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 1px 2px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  opacity: 1;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+
+  h5{
+    font-size: 1.25em;
+    display: block;
+    font-family: 'robotobold',arial, sans-serif;
+    color: $grey;
+  }
+
+  a{
+    display: block;
+    font-family: 'robotobold',arial, sans-serif;;
+    color: $grey;
+  }
+
+  p{
+    word-break: break-all;
+  }
+
+  .btn.remove-notice, .btn.edit-notice{
+
+    width: 3em;
+    margin-bottom: 1em;
+    float: right;
+    border: none;
+    color: white;
+    margin-right: 0.25em;
+
+    i{
+      font-size: 1.25em;
+    }
+  }
+
+  .btn.remove-notice{
+    background-color: $red;
+  }
+
+  .btn.edit-notice{
+    background-color: $grey;
+  }
+
+  img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  p {
+    font: 12px/18px arial, sans-serif;
+    color: #333;
+    margin: 0;
+    font-family: 'robotoregular',arial, sans-serif;;
+  }
+
+  .excerpt{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    word-break: break-word;
+  }
+
+  .post-details{
+    font-size: 1em;
+    font-family: 'robotothin',arial, sans-serif;;
+  }
+}
+
+
+/* =Player Profile
+----------------------------------------------- */
+.stat-num {
+
+  font-family: 'robotobold',arial, sans-serif;;
+  color: $grey;
+  font-size: 2em;
+
+  @media screen and (max-width: $break-small) {
+
+    font-size: 1.5em;
+  }
+
+}
+
+.stat-text {
+
+  font-family: 'roboto_condensedbold',arial, sans-serif;;
+  font-size: 1.5em;
+
+  @media screen and (max-width: $break-small) {
+
+    font-size: 1.5em;
+  }
+}
+
+span.ranking {
+
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+//Pie Chart styles, user profile page
+.chart {
+
+  padding-top: 2.5em;
+  padding-left: 0.1em;
+}
+
+.chart rect {
+  fill: $grey;
+}
+
+.chart text:first-of-type {
+  fill: black;
+  font-family: 'robotobold',arial, sans-serif;;
+}
+
+.chart text:last-of-type {
+  fill: white;
+  font: 15px sans-serif;
+  font-weight: bold;
+}
+
+.pie-chart {
+
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -5em;
+}
+
+.win-percentage, .loss-percentage {
+
+  padding: 0;
+}
+
+.loss-percentage{
+  text-align: right;
+}
+
+.points, .matches, .ranking {
+
+  display: block;
+}
+
+.stats-container {
+
+  margin-top: 4em;
+
+  @media screen and (max-width: $break-small) {
+
+    margin-top: 6em;
+  }
+
+}
+
+.pie-chart-container {
+
+  margin-top: 1em;
+
+}
+
+
+/* =Block Booking List
+----------------------------------------------- */
+
+.blk-list{
+  .blk-heading{
+    width: 100%;
+    display: block;
+    font-family: robotobold;
+    border-radius: 0;
+    margin-bottom: 0.5em;
+  }
+  .list-group-item{
+    margin-bottom: 0.5em;
+    ul{
+      li{
+        margin-bottom: 0.5em;
+      }
+      li.date{
+        margin-bottom: 0.5em;
+        font-weight: 500;
+      }
+
+      li.time{
+        display: block;
+        clear: both;
+      }
+
+      li.court{
+        font-weight: normal;
+      }
+
+      li.description{
+        font-size: 1.25em;
+      }
+
+      li.player1, li.created_at{
+        color: $grey;
+      }
+    }
+  }
+}
+
+/* =Footer
+----------------------------------------------- */
+.footer {
+  width: 100%;
+  background-color: $grey;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  position: relative;
+
+  .sponsors{
+
+    .row{
+      color: white;
+      margin-bottom: 0.5em;
+      font-family: 'robotobold',arial, sans-serif;;
+      font-size: 1.5em;
+    }
+    div img{
+      width: 15em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .social-media{
+    text-align: center;
+    a{
+      display: inline-block;
+      i{
+        color: white;
+        margin-left: 0.5em;
+        margin-right: 0.3em;
+      }
+    }
+  }
+}
+
+.footer-logo{
+  display: block;
+  margin: 1.5em auto 1em auto;
+  position: relative;
+  width: 15em;
+  height: 5em;
+  img{
+    float: left;
+    width: 100%;
+  }
+}
+
+

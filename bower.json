@@ -1,0 +1,26 @@
+{
+  "name": "squash_app",
+  "version": "0.0.0",
+  "authors": [
+    "Rakesh Mistry <r_mistry@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.4",
+    "bootstrap-datepicker": "~1.4.0",
+    "typeahead.js": "~0.10.5",
+    "fontawesome": "~4.3.0",
+    "d3": "~3.5.5",
+    "bootstrap": "~4.0.0"
+  },
+  "resolutions": {
+    "bootstrap": ">=2.0.4 <4.0"
+  }
+}

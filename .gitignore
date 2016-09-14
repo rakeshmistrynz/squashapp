@@ -1,0 +1,14 @@
+/vendor
+/node_modules
+.env
+.idea
+
+bootstrap/cache/
+.env.*.php
+.env.php
+.env
+
+*.jpg
+*.jpeg
+*.png
+*.gif
