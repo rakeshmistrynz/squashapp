@@ -1,4 +1,4 @@
-##Squash Booking Application
+## Squash Booking Application
 
 This is a squash booking application built using the Laravel PHP Framework.
 
